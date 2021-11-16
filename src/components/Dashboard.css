@@ -1,0 +1,106 @@
+.dashboard_wrapper {
+    padding: 40px 24px;
+}
+
+.dashboard_content {
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.dashboard_items {
+    position: relative;
+}
+
+.dashboard_orderInfo {
+    flex-basis: 75%;
+}
+
+.dashboard_profile {
+    flex-basis: 25%;
+}
+
+.dashboard_tabItemHeading {
+    padding: 8px 8px 0 8px;
+    height: 100%;
+    margin-bottom: -1px;
+    margin-left: 1px;
+    cursor: pointer;
+}
+
+.dashboard_TabsList {
+    padding-left: 8px;
+}
+
+.dashboard_activeTab {
+    background-color: white;
+    border: 1px solid var(--input-border-color);
+    border-bottom: 0;
+}
+
+.dashboard_items {
+    padding: 0 40px;
+}
+
+.dashboard_profileHeader {
+    margin: 22px 0px;
+}
+
+.Logout_Button {
+    background-color: transparent;
+    color: var(--header-text-color);
+    border: 0;
+    font-weight: 600;
+    font-size: large;
+    justify-content: flex-start;
+    padding: 14px 0;
+    padding-left: 8px;
+    outline: none;
+}
+
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    
+    .dashboard_orderInfo, .dashboard_profile {
+        flex-basis:100%
+    }
+    .dashboard_profileHeader, .dashboard_tabItemHeading {
+        font-size: 14px;
+    }
+    .dashboard_items {
+        padding: 0 12px;
+    }
+    .dashboard_wrapper {
+        padding: 40px 0;
+    }
+  }
+  
+    /* 
+      ##Device = Most of the Smartphones Mobiles (Portrait)
+      ##Screen = B/w 320px to 479px
+    */
+    
+    @media (min-width: 320px) and (max-width: 480px) {
+        .dashboard_orderInfo, .dashboard_profile {
+            flex-basis:100%
+        }
+        .dashboard_profileHeader, .dashboard_tabItemHeading {
+            font-size: 12px;
+        }
+        .dashboard_items {
+            padding: 0 12px;
+        }
+        .dashboard_wrapper {
+            padding: 40px 0;
+        }
+    }
+.minDataHeight {
+    height: auto;
+    min-height: 300px;
+}

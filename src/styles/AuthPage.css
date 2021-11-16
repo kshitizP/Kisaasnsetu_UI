@@ -1,0 +1,76 @@
+.AuthForm {
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px;
+}
+
+.RegisterForm, .LoginForm {
+    padding: 80px 0;
+    width: 100%;
+}
+
+.Section_Header {
+    text-align: center;
+}
+
+.Form_Item {
+    margin-bottom: 15px;
+    display: block;
+    position: relative;
+}
+
+.Section_Desc {
+    margin-bottom: 24px;
+}
+
+.Form__Input, .Form__Input:focus {
+  display: block;
+  padding: 12px 14px;
+  width: 100%;
+  resize: none;
+  display: block;
+  letter-spacing: normal;
+  background: transparent;
+  border: 1px solid var(--input-border-color);
+  border-radius: 0;
+  -webkit-transition: border-color 0.1s ease-in-out;
+  transition: border-color 0.1s ease-in-out;
+  outline-style: hidden;
+}
+
+.Floating_FormLabel {
+    position: absolute;
+    bottom: calc(100% - 8px);
+    left: 10px;
+    transform: translateY(5px);
+    padding: 0 5px;
+    font-size: 12px;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.Form__Input:focus {
+    border: 1px solid black;
+}
+  
+
+.Form__Input:not(:placeholder-shown) ~ .Floating_FormLabel{
+    transform: translateY(1px);
+    opacity: 1;
+    background-color: var(--main-bg-color);
+}
+
+.LoginForm_Hint {
+    text-align: center;
+    padding: 12px 0;
+}

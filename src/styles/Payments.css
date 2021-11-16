@@ -1,0 +1,95 @@
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.Address__main {
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    flex-flow: row wrap;
+}
+
+.Address__item {
+    flex-basis: 25%;
+    padding: 12px;
+    margin: 24px;
+}
+.Address__info{
+    font-family: 'Nunito sans';
+    font-weight: 400;
+}
+
+.AddressSelect__divMain{
+    padding: 24px;
+}
+
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .Address__item {
+        flex-basis: 40%;
+        margin: 12px;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .Address__item {
+        flex-basis: 40%;
+        margin: 12px;
+    }
+  }
+    /* 
+      ##Device = Most of the Smartphones Mobiles (Portrait)
+      ##Screen = B/w 320px to 479px
+    */
+    
+    @media (min-width: 320px) and (max-width: 480px) {
+        .Address__item {
+            flex-basis: 100%;
+            margin: 12px;
+        }
+    }
+
+.addAddress__page, .sellPage {
+    padding: 12px;
+    width:auto;
+    max-width: 600px;
+}
+.sellPage {
+    margin: auto;
+    padding: 40px 12px 80px 12px;
+}
+
+.orderPaymentPage, .orderPlaced {
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    flex-flow: row wrap;
+    
+}
+
+.orderSummary {
+    flex: 4 1 auto;
+    margin: 12px;
+}
+
+.paymentDiv {
+    flex: 1 1 auto;
+    margin: 12px auto;
+    height: auto;
+    width: auto;
+    max-width: 400px;
+}
+
+.payment__options {
+    padding: 12px;
+}
+
+.sellPage__Header {
+    font-family: var(--main-font-family);
+}
+
+.orderSummary__total {
+    padding-bottom: 100px;
+}

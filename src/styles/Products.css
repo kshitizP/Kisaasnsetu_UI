@@ -1,0 +1,231 @@
+.Main_Nav {
+  background-color: white;
+  border: none;
+}
+.loadingSpinner {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  justify-content: center;
+  align-items: center;
+}
+
+.productGrid, .ProductData--sections {
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin: 50px 0px;
+    padding: 0px 40px;
+}
+
+.productGrid {
+  padding: 0px 40px;
+  margin-left: -40px;
+}
+
+.productGrid--item, .ProductData--section {
+    flex-basis: 100%;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.productGrid--item {
+  padding-left: 40px;
+  width: auto;
+  height: auto;
+  max-width: 450px;
+  max-height: 500px;
+}
+
+.productImage {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+}
+
+.ProductData--image{
+  width: 100%;
+    max-width: 100%;
+}
+
+.productInfo--wrapper {
+  padding: 12px 0;
+  text-align: center;
+}
+
+.product__container {
+    margin: 0 auto;
+}
+
+.ProductData--main {
+  display: block;
+  margin: 0 auto 50px auto;
+  position: relative;
+  max-width: 1330px;
+}
+
+.leftSection {
+  flex-grow: 1.25;
+}
+
+.rightSection {
+  flex-grow: 1;
+  padding: 0px 40px;
+}
+
+.QuantitySelector__quantityValue {
+  display: inline-block;
+  padding: 0;
+  text-align: center;
+  letter-spacing: normal;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  width: 35px;
+}
+
+/* .ProductForm__AddToCart {
+  color: white;
+  border-color: var(--header-text-color);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--header-text-color);
+  transition-duration: 0.6s;
+}
+
+.ProductForm__AddToCart:hover {
+  color: var(--header-text-color);
+  background-color: white;
+} */
+
+.ProductDetail {
+  padding: 12px 0px;
+}
+
+.QuantitySelector{
+  margin: 10px 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid#d8d5d2;
+  white-space: nowrap;
+}
+
+.Quantity_change {
+  padding: 10px 20px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+  .productGrid--item {
+      flex-basis: 33.33333%;
+  }
+  .ProductData--section {
+    flex-basis: 40%;
+  }
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  .productGrid--item {
+      flex-basis: 33.33333%;
+  }
+  .ProductData--section {
+    flex-basis: 40%;
+  }
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  .productGrid--item {
+      flex-basis: 33.33333%;
+  }
+  .ProductData--section {
+    flex-basis: 40%;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  .productGrid--item {
+      flex-basis: 33.33333%;
+  }
+  .ProductData--section {
+    flex-basis: 40%;
+  }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  .productGrid--item {
+      flex-basis: 50%;
+  }
+  .ProductData--section {
+    flex-basis: 100%;
+  }
+}
+
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    .productGrid--item {
+        flex-basis: 100%;
+    }
+    .ProductData--section {
+      flex-basis: 100%;
+    }
+  }
+
+  .Quantity_change-small {
+    padding: 5px 10px;
+  }
+
+  .QuantitySelector__quantityValue-small {
+    width: 20px;
+  }

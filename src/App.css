@@ -1,0 +1,666 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+:root {
+  --main-text-color: #419505;
+  --header-font-family: 'Montserrat', sans-serif;
+  --main-font-family: 'Nunito sans', sans-serif;
+  --header-text-color: #107a33 ;
+  --main-bg-color: #f9f6f2;
+  --input-border-color: #d8d5d2;
+  --text-color-inverted: #f9f6f2;
+  --non-transparent-bg: #107a33;
+  --secondary-color: #0465b2;
+  --font-color-light: #575757;
+  --back-drop-color: #999999;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+}
+
+html {
+  text-size-adjust: 100%;
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--main-font-family);
+  font-weight: 400;
+  line-height: 1.65;
+  background-color: var(--main-bg-color);
+}
+
+div {
+  display: block;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+}
+ 
+a {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.Heading {
+  font-family: var(--header-font-family);
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.Heading-mobile {
+  font-family: var(--main-font-family);
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0.1em;
+}
+
+.Heading__other {
+  font-family: var(--main-font-family);
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0.1em;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
+.u-h8 {
+  font-size: 10px;
+}
+
+.u-h6 {
+  font-size: 12px;
+}
+
+.u-h5 {
+  font-size: 14px;
+}
+
+.u-h4 {
+  font-size: 16px;
+}
+
+.u-h2 {
+  font-size: 18px;
+}
+
+.u-h1 {
+  font-size: 20px;
+}
+
+.Base-text {
+  color: var(--header-text-color);
+  margin: 0;
+}
+
+.Icon {
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+  background: none;
+  pointer-events: none;
+}
+
+.Button {
+  position: relative;
+  padding: 14px 28px;
+  line-height: normal;
+  border: 1px solid transparent;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  font-family: var(--header-font-family);
+  font-weight: 500;
+  font-style: normal;
+  background-color: transparent;
+  cursor: pointer;
+  border-color: var(--header-text-color);
+  width: 100%;
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--header-text-color);
+  transition-duration: 0.6s;
+  color: var(--main-bg-color);
+}
+.Button:hover {
+  color: var(--header-text-color);
+  background-color: var(--main-bg-color);
+}
+
+button:disabled,
+button[disabled] {
+  visibility: hidden;
+}
+
+.Button_Secondary {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.Button_Secondary:hover {
+  color: var(--secondary-color);
+}
+
+select, input {
+  -webkit-writing-mode: horizontal-tb !important;
+  writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: -internal-light-dark(black, white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  appearance: textfield;
+  background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  padding: 1px 2px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
+  outline: none;
+}
+
+input[type="password" i] {
+  -webkit-text-security: disc !important;
+}
+
+.text-light {
+  color: var(--font-color-light);
+}
+
+.Large_amount_text {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.em-less {
+  letter-spacing: normal;
+}
+
+select:focus:required:invalid, input[type="password"]:focus:required:invalid, input[type="text"]:focus:required:invalid, input[type="tel"]:focus:required:invalid, textarea:focus:required:invalid, input[type="number"]:focus:required:invalid {
+  border: 1px solid red;
+  border-left: 5px solid red;
+} 
+
+.SideBar {
+  display: block;
+  width: 0;
+  height: 100%;
+  z-index: 1;
+  background-color: var(--non-transparent-bg);
+  position: fixed;
+  color: var(--text-color-inverted);
+  padding: 0;
+  transition: all 0.5s ease 0s;
+}
+.SideBar--items {
+  list-style: none;
+  display: block;
+  margin: 0px 18px;
+  visibility: hidden;
+  opacity: 0;
+  font-family: var(--main-font-family);
+  color: var(--text-color-inverted);
+  padding: 10px 0;
+  font-weight: 500;
+}
+
+.Border__bottom {
+  border-bottom: 1px solid var(--input-border-color);
+}
+
+.Border__top {
+  border-top: 1px solid var(--input-border-color);
+}
+
+.Border__bottom_dark {
+  border: 1px solid var(--font-color-light);
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.SideBar__hidden {
+  width: 250px;
+}
+
+.SideBar__hidden .SideBar--items {
+  visibility: visible;
+  opacity: 1; transition: opacity 1s linear;
+}
+
+.Blur {
+  opacity: 0;
+  background-color: black;
+  visibility: hidden;
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+.Blur_open {
+  opacity: 0.3;
+  display: block;
+  visibility: visible;
+}
+.SideMenu {
+  z-index: 2;
+}
+
+.Non_Link {
+  text-decoration: none;
+  color: inherit;
+}
+.list_Nostyle {
+  list-style: none;
+}
+
+.list_inline {
+  display: inline-block;
+}
+
+.backDrop {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: relative;
+  z-index: 8;
+  background-color: var(--back-drop-color);
+  opacity: 0.5;
+}
+
+.showOnTop {
+  z-index: 10;
+}
+
+.searchInput {
+  display: block;
+  padding: 12px 14px;
+  width: 100%;
+  resize: none;
+  letter-spacing: normal;
+  background: #fff2e3;
+  border-radius: 0;
+  outline-style: hidden;
+  border: none;
+  height: 100%;
+  -moz-box-shadow: inset 0 0 5px #000000;
+  -webkit-box-shadow: inset 0 0 5px #000000;
+  box-shadow: inset 0 0 2px #000000;
+  font-size: 24px;
+}
+
+.search {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+}
+
+.search_hidden {
+  height: 0px;
+}
+
+.search_hidden .searchInput {
+  height: 0;
+  border: 0;
+  margin: 0;
+  box-shadow: none;
+  padding: 0;
+  visibility: hidden;
+}
+
+.link-button {
+  background: none!important;
+border: none;
+/*optional*/
+font-family: var(--header-font-family);
+cursor: pointer;
+}
+
+.link-button:hover {
+text-decoration: underline;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #25b354;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 8px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.userTypeNotyf {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 300px;
+  font-size: xx-large;
+  font-family: var(--main-font-family);
+  margin: 0px -15px;
+  cursor: pointer;
+}
+
+.farmerImg {
+  background-image: url(./images/298-2983638_indian-farmer-png-indian-farmer-cartoon-png-transparent.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 400px;
+}
+
+.customerImg {
+  background-image: url(https://d2r6jp7chi630e.cloudfront.net/wp-content/uploads/2017/03/customer-base-marketing-2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 300px;
+}
+.notyf__toast {
+  max-width: 700px;
+}
+
+.notyf__ripple {
+  width: 900px;
+  height: 900px;
+}
+
+  @media (min-width: 481px) and (max-width: 767px) {
+    .userTypeNotyf {
+      width: 300px;
+      height: 150px;
+      margin: -17px -15px -17px 0px;
+    }
+
+    .farmerImg, .customerImg {
+      background-size: 200px;
+    }
+    .notyf__wrapper {
+      display: flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      justify-content: center;
+    }
+  }
+    
+    @media (min-width: 320px) and (max-width: 480px) {
+      .userTypeNotyf {
+        width: 300px;
+        height: 150px;
+        margin: -17px -15px -17px 0px;
+      }
+      .farmerImg, .customerImg {
+        background-size: 200px;
+      }
+      .notyf__wrapper {
+        display: flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        justify-content: center;
+      }
+    }
+
+.disabled_item {
+  pointer-events: none;
+}
+.orderSummary {
+  padding: 12px;
+}
+.orderItem__data {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+}
+
+.orderItem__imageWrapper {
+  flex-basis: 15%;
+  padding: 12px;
+}
+
+.orderItem__details {
+  flex-basis: 80%;
+  padding: 12px;
+}
+
+.orderItem__Image {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+  display: inline-block;
+}
+
+.orderSummary__header {
+  padding-bottom: 12px;
+}
+
+/* Custom radio buttons */
+input[type="radio"] + label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 30px;
+  margin-right: 15px;
+  font-size: 13px;
+}
+input[type="radio"] + label:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: 14px;
+  position: absolute;
+  top: -1px;
+  left: 2px;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  border-radius: 50%;
+}
+input[type="radio"] {
+  display: none !important;
+  *display: inline;
+}
+input[type="radio"]:checked + label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--main-text-color);
+}
+
+#root {
+  height: 100vh;
+  width: 100%;
+  display: table;
+}
+
+.footer {
+  background-color: white;
+  display: table-row;
+  width: 100%;
+}
+
+.footer_container {
+  padding: 40px 0 40px 0;
+}
+.footer__content {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  justify-content: space-between;
+  margin: auto;
+  flex-flow: row wrap;
+  padding: 0 80px;
+}
+
+
+.light_font {
+  font-weight: 400;
+}
+
+.padded_listItem{
+  padding-top: 12px;
+}
+
+.social_icons {
+  display: inline-block;
+  height: 4em;
+  width: 4em;
+  fill: currentColor;
+  vertical-align: middle;
+  stroke-width: 1px;
+  background: none;
+  pointer-events: none;
+}
+
+.social_link {
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--font-color-light);
+  cursor: pointer;
+}
+
+.social_link:hover {
+  color:var(--main-text-color);
+}
+
+.footer_items{
+  display: flex;
+  justify-content: center;
+  flex: 0 1 auto;
+  padding: 24px;
+  flex-basis: 33.33%
+}
+
+.social_icons {
+  margin-top: 24px;
+}
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .footer_items {
+    flex-basis: 50%;
+  }
+  .social_icons {
+    height: 3em;
+    width: 3em;
+  }
+}
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    .footer_items {
+      flex-basis: 50%;
+    }
+    .social_icons {
+      height: 2em;
+      width: 2em;
+    }
+  }
+
+  .loadingOverlay {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background: rgba(1,1,1,0.5);
+  }
