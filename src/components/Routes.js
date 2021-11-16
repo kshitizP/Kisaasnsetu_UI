@@ -66,8 +66,8 @@ function Routes(props) {
               <div className={sideNav ? "SideBar SideBar__hidden" : "SideBar"}>
                 <ul className="SideMenu">
                   <li className="Base-text Heading SideBar--items Border__bottom" onClick={(e) => setSideNav(!sideNav)}><Link to='/products' className="Non_Link">SHOP</Link></li>
-                  <li className="Base-text Heading SideBar--items Border__bottom" onClick={(e) => setSideNav(!sideNav)}><a href="#" className="Non_Link">LEARN</a></li>
-                  {utils.getCustomerType() !== 'C' && <li className="Base-text Heading SideBar--items Border__bottom" onClick={(e) => setSideNav(!sideNav)}><a href="#" className="Non_Link">SELL TO US</a></li>}
+                  <li className="Base-text Heading SideBar--items Border__bottom" onClick={(e) => setSideNav(!sideNav)}><a href="#learn" className="Non_Link">LEARN</a></li>
+                  {utils.getCustomerType() !== 'C' && <li className="Base-text Heading SideBar--items Border__bottom" onClick={(e) => setSideNav(!sideNav)}><a href="/place_sell_request" className="Non_Link">SELL TO US</a></li>}
                   <li className="Base-text Heading SideBar--items Border__bottom" onClick={(e) => setSideNav(!sideNav)}>
                     {!authState.isAuthenticated &&
                       <Link to='/login' className="Non_Link">ACCOUNT</Link> }

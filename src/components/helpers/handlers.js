@@ -31,6 +31,7 @@ export function handleField(fieldType, value, data) {
             if (email.valid || phone.valid)
                 return { valid: true, errormsg: "" };
             return { valid: false, errormsg: "Enter correct Email ID or Phone number" };
+        default: return { valid: false, errormsg: "Invalid" }
     }
 
 }

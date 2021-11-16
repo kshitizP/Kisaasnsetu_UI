@@ -27,8 +27,8 @@ function Footer(props) {
                     <div className="footer__contentRight">
                         <h2 className="Heading u-h4 Base-text light_font">Let's Connect</h2>
                         <div>
-                            <a className="social_link"><span style={{padding: '12px'}}>{svgInsta()}</span></a>
-                            <a className="social_link"><span style={{padding: '12px'}}>{svgFacebook()}</span></a>
+                            <a className="social_link" href="https://instagram.com"><span style={{padding: '12px'}}>{svgInsta()}</span></a>
+                            <a className="social_link" href="https://facebook.com"><span style={{padding: '12px'}}>{svgFacebook()}</span></a>
                         </div>
                     </div>
                 </div>

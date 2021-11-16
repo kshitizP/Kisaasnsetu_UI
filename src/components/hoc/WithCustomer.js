@@ -2,7 +2,8 @@ import React from 'react';
 import { getCustomerType, setCustomerType } from '../helpers/utils';
 import { Notyf } from 'notyf';
 const withCustomer = Component => props => {
-    const [cust, setCust] = React.useState()
+     //eslint-disable-next-line
+    const [, setCust] = React.useState()   
     React.useEffect( ()=> {
         const notyfOpt = new Notyf({
             duration: 0,

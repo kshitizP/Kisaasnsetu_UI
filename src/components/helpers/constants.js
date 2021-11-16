@@ -1,6 +1,6 @@
 const ENDPOINT = '/api';
 const Constants = {
-    emailRegex: '^[a-zA-Z0-9\.]+@[a-zA-Z0-9]+(\-)?[a-zA-Z0-9]+(\.)?[a-zA-Z0-9]{2,6}?\.[a-zA-Z]{2,6}$',
+    emailRegex: '^[a-zA-Z0-9.]+@[a-zA-Z0-9]+(-)?[a-zA-Z0-9]+(.)?[a-zA-Z0-9]{2,6}?.[a-zA-Z]{2,6}$',
     mobileRegex: '^[6-9]{1}[0-9]{9}|[0-9]{3}-[0-9]{2}-[0-9]{3}$',
     nameRegex: '^[A-Za-z]{3,}',
     SERVER_ENDPOINT: ENDPOINT,

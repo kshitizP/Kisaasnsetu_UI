@@ -19,7 +19,7 @@ function Header(props)  {
                 </div>
                 <ul className="Main_Nav--listItems Main_Nav--listItemsLeft">
                     <li className="Main_Nav--item"><Link to='/products' className="Base-text Heading u-h4">SHOP</Link></li>
-                    <li className="Main_Nav--item"><a href="#" className="Base-text Heading u-h4">LEARN</a></li>
+                    <li className="Main_Nav--item"><a href="#learn" className="Base-text Heading u-h4">LEARN</a></li>
                     {getCustomerType() !== 'C' &&<li className="Main_Nav--item"><Link to='/place_sell_request' className="Base-text Heading u-h4">Sell to Us</Link></li>}
                 </ul>
                 <div className="Main_Nav--logo">

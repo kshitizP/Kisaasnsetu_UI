@@ -12,14 +12,14 @@ function HomePage(props) {
                 <div className="banner-wrapper">
                     <div className="intro-images">
                         <Link to='products'>
-                            <img src={dummyImage1} className="banner-image"/>
+                            <img src={dummyImage1} className="banner-image" alt=''/>
                         </Link>
                     </div>
                     <div className="intro-images">
-                        <img src={dummyImage2} className="banner-image"/>
+                        <img src={dummyImage2} className="banner-image"  alt=''/>
                     </div>
                     <div className="intro-images">
-                        <img src={dummyImage3} className="banner-image"/>
+                        <img src={dummyImage3} className="banner-image"  alt=''/>
                     </div>
                 </div>
                 <MessageForm/>
